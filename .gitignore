@@ -1,0 +1,23 @@
+# Gradle
+.gradle/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Local Android configuration
+local.properties
+*.iml
+.idea/
+.DS_Store
+
+# Signing material and secrets
+*.jks
+*.keystore
+keystore.properties
+google-services.json
+.env
+.env.*
+
+# Android Studio / tooling
+.externalNativeBuild/
+.cxx/
+captures/
