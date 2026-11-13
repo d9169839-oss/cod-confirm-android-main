@@ -30,12 +30,20 @@ Decisions are recorded as short ADRs. Product scope remains governed by `CLAUDE.
 
 **Context:** Orders contain customer names, phone numbers, and addresses.
 
-**Decision:** Do not log PII, request unnecessary permissions, or add analytics. Configure backup behavior deliberately and document it before release.
+**Decision:** Do not log PII, request unnecessary permissions, or add analytics. Configure Android cloud backup and device-transfer inclusion explicitly using XML backup rules; document that order data may be included in device backup.
 
-**Consequences:** Sensitive order data stays out of diagnostic telemetry; backup inclusion must be disclosed to users.
+**Consequences:** Sensitive order data stays out of diagnostic telemetry. The app currently opts into backup inclusion, which must be disclosed in the privacy policy before release.
+
+## ADR-0005: Stable baseline Android toolchain
+
+**Context:** The brief requires dependency versions to be checked rather than guessed. Official Android release information lists AGP 8.13.2 as a stable release and requires Gradle 8.13; Kotlin 2.4.21 is the current stable Kotlin patch release.
+
+**Decision:** Pin AGP 8.13.2, Gradle 8.13, Kotlin 2.4.21, KSP 2.3.10, Hilt 2.60.1, Room 2.8.5, Navigation 2.10.2, and Compose BOM 2026.09.00 in the version catalog. Java toolchain target is 17.
+
+**Consequences:** Versions are centralized and reproducible. Validate the complete plugin/dependency matrix with CI before treating the foundation as complete.
 
 ## Open verification items
 
-- Confirm current stable Android Gradle Plugin, Kotlin, Compose BOM, Hilt/KSP, Room, DataStore, Navigation, and test dependency compatibility before pinning versions.
+- Confirm the complete Kotlin/KSP/AGP/Hilt plugin matrix through a clean CI build.
 - Select and document one ktlint integration (Spotless or ktlint Gradle plugin) alongside the detekt configuration.
-- Confirm target SDK and required JDK against the selected stable Android Gradle Plugin.
+- Revisit Android backup inclusion and privacy-policy wording before Play release.
