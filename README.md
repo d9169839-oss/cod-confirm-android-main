@@ -26,15 +26,15 @@ The initial implementation is a single Android `app` module with package-level b
 
 ## Build
 
-Open the project in the latest compatible Android Studio and allow Gradle sync. From a shell with the Android SDK configured:
+The repository includes a lightweight Gradle bootstrap script. On macOS/Linux, run:
 
 ```bash
-./gradlew assembleDebug
-./gradlew testDebugUnitTest
-./gradlew lintDebug
+bash ./gradlew assembleDebug
+bash ./gradlew testDebugUnitTest
+bash ./gradlew lintDebug
 ```
 
-The required quality gates are documented in [CLAUDE.md](CLAUDE.md). Local signing files, `local.properties`, and credentials must never be committed.
+On Windows, use `gradlew.bat assembleDebug`, `gradlew.bat testDebugUnitTest`, or `gradlew.bat lintDebug`. The first run downloads Gradle 8.13. Android SDK setup is still required for Android tasks.
 
 ## Development status
 
@@ -42,4 +42,4 @@ See [docs/PROGRESS.md](docs/PROGRESS.md) for the phase checklist and verificatio
 
 ## Privacy
 
-Version 1 stores order/customer information locally on the device. Treat customer names, phone numbers, and addresses as sensitive data: do not log them or include them in analytics or crash metadata.
+Version 1 stores order/customer information locally on the device. Android backup is currently configured to include app databases and settings for cloud backup/device transfer. Customer names, phone numbers, and addresses are sensitive data: do not log them or include them in analytics or crash metadata.
