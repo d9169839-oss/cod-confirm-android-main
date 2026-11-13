@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">COD Confirm</string>
+    <string name="nav_orders">Orders</string>
+    <string name="nav_stats">Stats</string>
+    <string name="nav_templates">Templates</string>
+    <string name="nav_settings">Settings</string>
+    <string name="orders_title">Orders</string>
+    <string name="orders_subtitle">Keep every COD order organized.</string>
+    <string name="orders_empty_title">Your orders will appear here</string>
+    <string name="orders_empty_body">Add your first order to start tracking confirmations and deliveries.</string>
+    <string name="stats_title">Order insights</string>
+    <string name="stats_empty_body">Your refusal rate and estimated return losses will appear after you track orders.</string>
+    <string name="templates_title">Message templates</string>
+    <string name="templates_body">Prepare customer confirmation messages in English, Urdu, and Roman Urdu.</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_body">Shop details, language, return cost, and data export.</string>
+    <string name="coming_soon">This section is being built.</string>
+</resources>
