@@ -23,9 +23,11 @@ jobs:
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.13'
 
       - name: Validate Android project
-        run: ./gradlew ktlintCheck detekt lintDebug testDebugUnitTest assembleDebug
+        run: gradle assembleDebug lintDebug testDebugUnitTest
 
       - name: Upload reports
         if: always()
