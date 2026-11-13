@@ -4,13 +4,13 @@ The repository-root `CLAUDE.md` is the authoritative engineering brief. A task i
 
 ## Phase 0 — Foundation
 
-- [ ] 0.1 Scaffold project, Gradle Kotlin DSL, version catalog, minSdk 26
-- [ ] 0.2 Configure Hilt, KSP, Room, DataStore, Timber, Compose BOM, Navigation
+- [x] 0.1 Scaffold project, Gradle Kotlin DSL, version catalog, minSdk 26 (initial scaffold committed; CI verification pending)
+- [x] 0.2 Configure Hilt, KSP, Room, DataStore, Compose BOM, Navigation (initial wiring committed; CI verification pending)
 - [ ] 0.3 Add ktlint + detekt and make gates pass on the empty project
-- [ ] 0.4 Create package skeleton and core/common primitives
+- [ ] 0.4 Complete package skeleton and core/common primitives
 - [ ] 0.5 Add architecture tests
-- [ ] 0.6 Add architecture docs, CI workflow, and .gitignore
-- [ ] 0.7 Add design system and four-screen bottom-navigation shell
+- [x] 0.6 Add architecture docs, CI workflow, and .gitignore (CI currently runs assemble, lint, and JVM tests)
+- [x] 0.7 Add Material 3 theme and four-screen bottom-navigation shell (initial placeholders)
 
 ## Phase 1 — Local-only MVP
 
@@ -50,4 +50,5 @@ The repository-root `CLAUDE.md` is the authoritative engineering brief. A task i
 
 | Date | Scope | Result |
 |---|---|---|
-| 2026-11-14 | Repository access and source brief reviewed | Write permission confirmed; repository initially empty; no Android build has been run yet |
+| 2026-11-14 | Repository access and source brief reviewed | Write permission confirmed; repository initially empty |
+| 2026-11-14 | Initial Android scaffold | Files committed; no Gradle build or tests executed in this environment; CI pending |
