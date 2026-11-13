@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">COD Confirm</string>
+    <string name="nav_orders">آرڈرز</string>
+    <string name="nav_stats">اعداد و شمار</string>
+    <string name="nav_templates">پیغامات</string>
+    <string name="nav_settings">ترتیبات</string>
+    <string name="orders_title">آرڈرز</string>
+    <string name="orders_subtitle">اپنے تمام COD آرڈرز منظم رکھیں۔</string>
+    <string name="orders_empty_title">آپ کے آرڈرز یہاں نظر آئیں گے</string>
+    <string name="orders_empty_body">تصدیق اور ڈیلیوری ٹریک کرنے کے لیے اپنا پہلا آرڈر شامل کریں۔</string>
+    <string name="stats_title">آرڈر کی کارکردگی</string>
+    <string name="stats_empty_body">آرڈرز ٹریک کرنے کے بعد ریٹرن ریٹ اور اندازاً نقصان یہاں نظر آئے گا۔</string>
+    <string name="templates_title">پیغام کے سانچے</string>
+    <string name="templates_body">انگریزی، اردو اور رومن اردو میں تصدیقی پیغامات تیار کریں۔</string>
+    <string name="settings_title">ترتیبات</string>
+    <string name="settings_body">دکان کی تفصیلات، زبان، ریٹرن لاگت اور ڈیٹا ایکسپورٹ۔</string>
+    <string name="coming_soon">اس حصے پر کام جاری ہے۔</string>
+</resources>
