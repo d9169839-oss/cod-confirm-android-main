@@ -14,9 +14,9 @@ Decisions are recorded as short ADRs. Product scope remains governed by `CLAUDE.
 
 **Context:** Sellers must be able to use the core workflow without connectivity. Phase 1 explicitly prohibits network code.
 
-**Decision:** Room is the order source of truth and Preferences DataStore stores settings. Do not add Supabase, authentication, INTERNET permission, or sync workers in Phase 1.
+**Decision:** Room is the order source of truth and Preferences DataStore stores settings. Do not add Supabase, authentication, INTERNET permission, or sync workers in Phase 1. Room runtime/compiler dependencies and schema export configuration are pinned now; create the concrete database only alongside the first real entities in task 1.2.
 
-**Consequences:** Core order operations remain available offline. Cloud backup requires a separately approved Phase 2.
+**Consequences:** Core order operations remain available offline. Avoids introducing an invalid empty Room database before the order schema exists. Cloud backup requires a separately approved Phase 2.
 
 ## ADR-0003: Keep sync readiness out of the domain model
 
@@ -36,9 +36,9 @@ Decisions are recorded as short ADRs. Product scope remains governed by `CLAUDE.
 
 ## ADR-0005: Stable baseline Android toolchain
 
-**Context:** The brief requires dependency versions to be checked rather than guessed. Official Android release information lists AGP 8.13.2 as a stable release and requires Gradle 8.13; Kotlin 2.4.21 is the current stable Kotlin patch release.
+**Context:** The brief requires dependency versions to be checked rather than guessed. Official Kotlin compatibility documentation lists Kotlin Gradle Plugin 2.4.21 as fully supported with Gradle 7.6.3–9.7.0 and AGP 8.5.2–9.3.1. Android's AGP release documentation lists AGP 8.13.2 with Gradle 8.13.
 
-**Decision:** Pin AGP 8.13.2, Gradle 8.13, Kotlin 2.4.21, KSP 2.3.10, Hilt 2.60.1, Room 2.8.5, Navigation 2.10.2, and Compose BOM 2026.09.00 in the version catalog. Java toolchain target is 17.
+**Decision:** Pin AGP 8.13.2, Gradle 8.13, Kotlin 2.4.21, KSP 2.3.10, Hilt 2.60.1, Room 2.8.5, Navigation 2.10.2, and Compose BOM 2026.08.00 in the version catalog. Java toolchain target is 17.
 
 **Consequences:** Versions are centralized and reproducible. Validate the complete plugin/dependency matrix with CI before treating the foundation as complete.
 
